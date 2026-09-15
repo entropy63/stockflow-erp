@@ -1,0 +1,9 @@
+{
+  // Start from everything in tsconfig.json, then override:
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // Compile only from src — keeps test files out of dist/
+    "rootDir": "src"
+  },
+  "include": ["src"]
+}

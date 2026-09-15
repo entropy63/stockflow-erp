@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    // Which JS features to emit. ES2022 = modern Node, no transpilation needed.
+    "target": "ES2022",
+
+    // How compiled files import each other. "commonjs" = require/module.exports,
+    // which Node and Prisma handle without extra config.
+    "module": "nodenext",
+
+    // Which built-in JS APIs (Promise, Map, etc.) TypeScript knows about.
+    "lib": ["ES2022"],
+
+    // Compiled .js output goes to this folder.
+    "outDir": "dist",
+
+    // THE big one. Catches: implicit any, possibly-undefined values,
+    // wrong argument types... ~80% of bugs before you run anything.
+    "strict": true,
+
+    // Error on declared-but-unused variables and parameters.
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    // Error if a switch case is missing a break (subtle bug source).
+    "noFallthroughCasesInSwitch": true,
+
+    // Lets you `import express from 'express'` even for packages
+    // that export the old CommonJS way.
+    "esModuleInterop": true,
+
+    // Don't type-check the innards of node_modules — massive speedup, everyone does it.
+    "skipLibCheck": true,
+
+    // Emit .map files so stack traces in errors point at your .ts lines, not .js.
+    "sourceMap": true,
+
+    // Enforces consistent file naming — matters on Windows (case-insensitive)
+    // vs Linux servers (case-sensitive).
+    "forceConsistentCasingInFileNames": true
+  },
+
+  // Which folders the compiler and VS Code should check.
+  "include": ["src", "test"]
+}
