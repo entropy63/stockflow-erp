@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Environment & secrets (commit .env.example instead)
+.env
+.env.local
+.env.*.local
+
+# Test coverage & logs
+coverage/
+*.log
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Claude Code local settings
+.claude/settings.local.json
