@@ -13,6 +13,9 @@
     // Compiled .js output goes to this folder.
     "outDir": "dist",
 
+    // Explicit so TS6 doesn't guess the common root (base config covers src + test).
+    "rootDir": ".",
+
     // THE big one. Catches: implicit any, possibly-undefined values,
     // wrong argument types... ~80% of bugs before you run anything.
     "strict": true,
@@ -33,6 +36,10 @@
 
     // Emit .map files so stack traces in errors point at your .ts lines, not .js.
     "sourceMap": true,
+
+    // Ambient type packages. "node" gives us process, console, fs, path...
+    // (with nodenext resolution TS6 requires this to be explicit)
+    "types": ["node"],
 
     // Enforces consistent file naming — matters on Windows (case-insensitive)
     // vs Linux servers (case-sensitive).
