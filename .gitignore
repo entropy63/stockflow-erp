@@ -20,3 +20,11 @@ Thumbs.db
 
 # Claude Code local settings
 .claude/settings.local.json
+
+# Local-only: planning docs and the reference build
+/reference/
+Plan and Architecture to Build StockFlow ERP from Scratch.md
+Plan and Architecture to Build StockFlow ERP from Scratch.pdf
+
+# Local safety backups — never publish these (they can contain old history)
+.git-backup/
