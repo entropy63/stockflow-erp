@@ -1,6 +1,6 @@
-import * as repo from "./repository"
-import { ConflictError, NotFoundError } from "../../domain/errors"
-import type { CreateCategoryInput,UpdateCategoryInput } from "./schema"
+import * as repo from "./category.repository"
+import { ConflictError, NotFoundError } from "../../../domain/errors"
+import type { CreateCategoryInput,UpdateCategoryInput } from "./category.schema"
 
 export  function listCategories(){
     return repo.findAll();

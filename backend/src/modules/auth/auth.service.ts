@@ -1,4 +1,4 @@
-import { findUserByEmail } from "./repository";
+import { findUserByEmail } from "./auth.repository";
 import { verifyPassword } from "../../lib/password";
 import { signToken } from "../../lib/token";
 import { UnauthorizedError } from "../../domain/errors";

@@ -1,4 +1,4 @@
-import {prisma} from '../../db'
+import {prisma} from '../../../db'
 
 export function findAll(){
     return prisma.category.findMany({orderBy: {name:"asc"}});

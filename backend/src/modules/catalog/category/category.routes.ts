@@ -1,9 +1,9 @@
 import { Router } from 'express';
 import { Role } from '@prisma/client';
-import { authenticate, authorize } from '../../middleware/auth';
-import { validateBody } from '../../middleware/validate';
-import { createCategorySchema, updateCategorySchema } from './schema';
-import * as controller from './controller';
+import { authenticate, authorize } from '../../../middleware/auth';
+import { validateBody } from '../../../middleware/validate';
+import { createCategorySchema, updateCategorySchema } from './category.schema';
+import * as controller from './category.controller';
 
 export const categoryRouter = Router();
 

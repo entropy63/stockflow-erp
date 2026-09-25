@@ -7,8 +7,10 @@ import { env } from './env';
 import { healthRouter } from './modules/health/health.routes';
 import { notFoundHandler } from './middleware/not-found';
 import { errorHandler } from './middleware/error-handler';
-import {authRouter} from './modules/auth/routes';
-import { categoryRouter } from './modules/catalog/category.routes';
+import {authRouter} from './modules/auth/auth.routes';
+import { categoryRouter } from './modules/catalog/category/category.routes';
+import { unitRouter } from './modules/catalog/unit/unit.routes';
+
 
 export function createApp() {
 const app = express();
@@ -20,6 +22,7 @@ app.use(morgan('dev'));
 app.use('/health', healthRouter);
 app.use('/auth', authRouter);
 app.use('/categories',categoryRouter)
+app.use('/units',unitRouter)
 app.use(notFoundHandler);
 app.use(errorHandler);
 
