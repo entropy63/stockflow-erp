@@ -28,3 +28,8 @@ Plan and Architecture to Build StockFlow ERP from Scratch.pdf
 
 # Local safety backups — never publish these (they can contain old history)
 .git-backup/
+
+# Skill tooling dropped into the project root — not part of StockFlow
+.agents/
+resume-builder-skill/
+skills-lock.json

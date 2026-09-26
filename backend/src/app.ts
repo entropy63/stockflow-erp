@@ -10,6 +10,7 @@ import { errorHandler } from './middleware/error-handler';
 import {authRouter} from './modules/auth/auth.routes';
 import { categoryRouter } from './modules/catalog/category/category.routes';
 import { unitRouter } from './modules/catalog/unit/unit.routes';
+import { productRouter } from './modules/catalog/product/product.routes';
 
 
 export function createApp() {
@@ -23,6 +24,7 @@ app.use('/health', healthRouter);
 app.use('/auth', authRouter);
 app.use('/categories',categoryRouter)
 app.use('/units',unitRouter)
+app.use('/products',productRouter)
 app.use(notFoundHandler);
 app.use(errorHandler);
 
